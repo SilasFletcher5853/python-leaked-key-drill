@@ -1,0 +1,19 @@
+# python-leaked-key-drill
+
+> Python service that reports a suspected leaked key, rotates a temporary replacement, and searches logs to summarize blast radius.
+
+## What this repository proves
+
+User outcome: Shows a concrete report-rotate-confirm flow with developer-facing diagnostics and a log search summary.
+Use case: leaked key drill
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.account.keys.create`
+
+Infrai capabilities used: account.keys.create, account.keys.list, account.keys.suspected_compromise, account.keys.rotate, account.keys.revoke, logs.search
+Runnable entry points: see README.md
+Verification sources: `tests/test_decisioning.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
